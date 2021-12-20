@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(196,87,157,1) 100%, rgba(0,212,255,1) 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#heading{
+  display: block;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  width: fit-content;
+  margin: auto;
+  font-size: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container-box{
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4,5rem);
+  grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  
+   
+grid-template-areas:
+  'output output output output'
+  'a a b c'
+  'd e f g'
+  'h i j k'
+  'l m n o'
+  'p q r r'
 }
 
-.App-link {
-  color: #61dafb;
+#cancel{
+  grid-area: a ;
+}
+#delete{
+  grid-area: b ;
+}
+#divide{
+  grid-area: c ;
+}
+#one{
+  grid-area: d ;
+}
+#two{
+  grid-area: e ;
+}
+#three{
+  grid-area: f ;
+}
+#mul{
+  grid-area: g ;
+}
+#four{
+  grid-area: h ;
+}
+#five{
+  grid-area: i ;
+}
+#six{
+  grid-area: j ;
+}
+#plus{
+  grid-area: k ;
+}
+#seven{
+  grid-area: l ;
+}
+#eight{
+  grid-area: m ;
+}
+#nine{
+  grid-area: n ;
+}
+#minus{
+  grid-area: o ;
+}
+#dot{
+  grid-area: p ;
+}
+#zero{
+  grid-area: q ;
+}
+#equals{
+  grid-area: r ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#output-box{
+  grid-area: output;
+  background-color: rgba(0,0,0,0,.7);
+  border: 1px solid white;
+ 
+color: white;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+justify-content: space-around;
+word-wrap: break-word;
+word-break: break-all;
 }
+
+button{
+  background-color: rgba(255, 255, 255, .9);
+  cursor: pointer;  
+  font-size: 2rem;
+  outline: none;
+  margin: 0;
+  border: 1px solid white;
+ 
+}
+
+button:focus,button:hover{
+  background-color: rgba(255, 255, 255, .7);
+}
+
+#output-box #prev-output{
+  color: rgba(255, 255, 255, .9);
+  font-size: 1.5rem;
+}
+#output-box #curr-output{
+  color: rgba(255, 255, 255);
+  font-size: 2.5rem;
+}
+
+
